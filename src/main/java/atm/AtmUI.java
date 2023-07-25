@@ -1,18 +1,18 @@
 package atm;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.io.IOException;
 import java.util.Scanner;
 
 /**
    A text-based simulation of an automatic teller machine.
  */
+@Component
 public class AtmUI {
-
+	@Autowired
 	private ATM atm;
-
-	public AtmUI(ATM atm) {
-		this.atm = atm;
-	}
 
 	public void run() {
 		Scanner in = new Scanner(System.in);
